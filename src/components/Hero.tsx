@@ -2,6 +2,9 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
+// If you're using Next.js, use 'next/image' instead of 'img' for <Image />
+// If not, replace <Image ... /> with <img ... /> and remove the import.
+
 const Hero: React.FC = () => {
   return (
     <section className="pt-20 pb-16 md:pt-28 md:pb-24">
@@ -23,41 +26,21 @@ const Hero: React.FC = () => {
             <Button className="bg-primary hover:bg-primary-600 text-white text-lg py-6 px-8">
               Get Started Now
             </Button>
-            <Button
-              variant="outline"
-              className="group text-lg py-6 px-8 border-primary/30 text-primary hover:text-primary hover:bg-primary-100"
-            >
-              See Pricing
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
           </div>
         </div>
-        <div className="lg:w-1/2 relative">
-          <div className="bg-gradient-radial from-primary-200/70 to-transparent rounded-full w-[500px] h-[500px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 opacity-50"></div>
-          <div className="relative -z-0 animate-float">
-            <PhoneMockup />
-          </div>
+        {/* Right Side: Simple Image */}
+        <div className="lg:w-1/2 flex justify-center">
+          <img
+            src="/Sign in-left.png"
+            alt="DigiPlanter app interface"
+            width={320}
+            height={580}
+            className="rounded-2xl object-cover w-full max-w-xs sm:max-w-sm md:max-w-md"
+          />
         </div>
       </div>
     </section>
   );
 };
-
-const PhoneMockup: React.FC = () => (
-  <div className="relative mx-auto w-[280px] md:w-[320px]">
-    <div className="rounded-[36px] overflow-hidden border-8 border-gray-800 shadow-xl">
-      <div className="bg-gray-800 absolute top-0 left-0 right-0 z-10 h-6 w-full">
-        <div className="absolute top-1.5 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gray-600 rounded-full"></div>
-      </div>
-      <div className="pt-6 bg-primary-100 h-[580px] overflow-hidden">
-        <img
-          src="/image.png"
-          alt="DigiPlanter app interface"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-);
 
 export default Hero;

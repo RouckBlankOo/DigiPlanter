@@ -7,6 +7,10 @@
 
 @layer base {
   :root {
+
+    --primary: 93 53% 28%; /* HSL for #477022 */
+    --primary-foreground: 0 0% 100%;
+    
     --background: 160 53% 98%;
     --foreground: 220 23% 12%;
 
@@ -73,6 +77,7 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
   }
 
   body {

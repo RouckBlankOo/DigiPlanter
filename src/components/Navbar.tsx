@@ -46,15 +46,12 @@ const Navbar: React.FC = () => {
 
 const Logo: React.FC = () => (
   <a href="/" className="flex items-center">
-    <div className="text-primary mr-2">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        className="w-8 h-8"
-      >
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17v-6H7l10-9v6h4l-10 9z" />
-      </svg>
+    <div className="mr-2">
+      <img
+        src="/Icon.png"
+        alt="DigiPlanter Logo"
+        className="w-12 h-12 rounded-full"
+      />
     </div>
     <span className="font-bold text-xl">DigiPlanter</span>
   </a>
@@ -64,9 +61,8 @@ const NavLinks: React.FC = () => {
   const links = [
     { name: "Home", href: "/" },
     { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
     { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "#contact" }, // Contact added
   ];
 
   return (
@@ -90,9 +86,8 @@ const MobileNavLinks: React.FC<{
   const links = [
     { name: "Home", href: "/" },
     { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
     { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "#contact" }, // Contact added
   ];
 
   return (
